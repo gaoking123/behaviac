@@ -563,7 +563,7 @@ namespace PluginBehaviac.Exporters
                 string agentDescription = string.IsNullOrEmpty(agent.Description) ? "" : agent.Description;
                 //file.WriteLine("{0}[behaviac.TypeMetaInfo(\"{1}\", \"{2}\")]", indent, agentDisplayName, agentDescription);
                 string baseClassStr = (agent.Base != null) ? string.Format(" : {0}", agent.Base.Name.Replace("::", ".")) : "";
-                file.WriteLine("{0}public class {1}{2}", indent, agent.BasicName, baseClassStr);
+                file.WriteLine("{0}public partial class {1}{2}", indent, agent.BasicName, baseClassStr);
 
                 if (!preview)
                 {

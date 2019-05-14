@@ -242,7 +242,7 @@ namespace Behaviac.Design.Exporters
                     }
                 }
 
-                file.WriteLine("{0}///<<< LASTNAME:{1}", indent, oldName);
+                file.WriteLine("{0}{2}{1}", indent, oldName, method_head_old_name);
             }
         }
 
